@@ -6,16 +6,16 @@
       <%= form_with(model: @user, local: true) do |f| %> <!--このブロック変数であるfは、HTML要素に対応するメソッドが呼び出されると、@userのカラムを設定するために設計されたHTMLを返してくれる-->
         <%= render 'shared/error_messages' %>
         
-        <%= f.label :name, class: "sign-label" %>
+        <%= f.label :name, class: "label-signup" %>
         <%= f.text_field :name, class: "form-control" %>
         
-        <%= f.label :email, class: "sign-label" %>
+        <%= f.label :email, class: "label-signup" %>
         <%= f.email_field :email, class: "form-control" %>
         
-        <%= f.label :password, class: "sign-label" %>
+        <%= f.label :password, class: "label-signup" %>
         <%= f.password_field :password, class: "form-control" %>
         
-        <%= f.label :password_confirmation, "Confirmation", class: "sign-label" %>
+        <%= f.label :password_confirmation, "Confirmation", class: "label-signup" %>
         <%= f.password_field :password_confirmation, class: "form-control" %>
         
         <%= f.submit "新規作成", class: "btn btn-primary btn-block btn-signup" %>
